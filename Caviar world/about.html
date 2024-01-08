@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caviarworld</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="about.html">FAQ</a>
+        <a href="product.html">Продукция</a>
+        <a href="contacts.html">Контакты</a>
+    </nav>
+
+    <div class="gir_1" id="gir"></div>
+
+    <div class="container">
+        <button class="question">Икра качественная?</button>
+        <div class="answer">
+          <p>Вся икра имеет необходимые документы. Мы работаем исключительно с легальной продукцией, высочайший вкус и польза которой подтверждены документально.</p>
+        </div>
+
+        <button class="question">Что с доставкой?</button>
+        <div class="answer">
+          <p>Бесплатная доставка по Ростову-на-Дону для заказов от 16900р. Ваш заказ будет доставлен в выбранный Вами временной интервал. Если доставка нужна в более сжатый временной интервал - обсудите это с менеджером, мы обязательно что-нибудь придумаем. Также есть возможность забрать свой заказ из нашего оффлайн магазина.</p>
+        </div>
+
+        <button class="question">Какие варианты оплаты?</button>
+        <div class="answer">
+          <p>Оплата картой или наличными курьеру при получении заказа.</p>
+        </div>
+
+        <button class="question">Могу ли увезти вашу икру в подарок за границу?</button>
+        <div class="answer">
+          <p>Да,по действующему законодательству один человек может вывезти за территорию РФ 250г легальной черной икры</p>
+        </div>
+      </div>
+
+      <script>
+      var questions = document.getElementsByClassName("question");
+      var i;
+
+      for (i = 0; i < questions.length; i++) {
+        questions[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var answer = this.nextElementSibling;
+          if (answer.style.maxHeight){
+            answer.style.maxHeight = null;
+          } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+          } 
+        });
+      }
+      </script>
+
+            <footer>
+                <p>&copy; 2024 CAVIAR. Все права защищены.</p>
+            </footer>
+
+</body>
+</html>
